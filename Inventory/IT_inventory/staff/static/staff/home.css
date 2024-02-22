@@ -1,0 +1,72 @@
+h1{
+    color: red;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: rgb(240, 240, 240); */
+    /* margin-top:-7px; */
+    border-radius: 10px;
+    box-shadow:0px 5px 20px 0 rgb(160, 160, 160);
+}
+.main-nav{
+    margin-left:200px;
+    display:flex;
+    width:90%;
+    padding:10px;
+    column-gap:10px
+    
+}
+.main-nav a{
+    font-size: 30px;
+    /* background-color: rgb(236, 236, 255); */
+    color: purple;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+.main-nav a:hover{
+    color: white;
+    background-color: rgb(202, 153, 202);
+    transition-duration:0.3s;
+}
+#dashboard{
+    color:rgb(255, 255, 255);
+    background-color:  purple;
+}
+#all_explain{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#links{
+    margin: 40px auto;
+}
+#linklink{
+    background-color: rgb(255, 245, 255);
+    margin:50px auto;
+}
+#explain{
+    margin: 10px auto;
+}
+#explain p{
+    font-size: 18px;
+}
+#explain h3{
+    color:purple;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Style the text inside the footer */
+.footer-content {
+    font-size: 14px;
+}

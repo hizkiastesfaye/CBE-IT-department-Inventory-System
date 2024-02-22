@@ -1,0 +1,91 @@
+
+/* -----------------------------header start----------------------------*/
+header{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow:0 5px 20px 0 rgb(160, 160, 160);
+}
+.main-nav{
+    margin-left:200px;
+    display:flex;
+    width:90%;
+    padding:10px;
+    column-gap:10px
+    
+}
+.main-nav a{
+    font-size: 30px;
+    color: purple;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+.main-nav a:hover{
+    color: white;
+    background-color: rgb(202, 153, 202);
+    transition-duration:0.3s;
+}
+nav #items{
+    color:rgb(255, 255, 255);
+    background-color:  purple;
+}
+
+/* -----------------------------header end----------------------------*/
+
+/* -----------------------------item-list end----------------------------*/
+#check{
+    width:70%;
+    margin:0 auto;
+    
+}
+#check-list1{
+    /* background-color: rgb(241, 241, 241); */
+    height:450px;
+    overflow-y:auto;
+    border-radius: 10px;
+
+    
+}
+#check-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap:40px;
+
+}
+#check-head{
+    /* background-color: rgb(0, 255, 89); */
+    color:purple;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:10px;
+    height:40px;
+    margin:60px 0 20px 0;
+}
+.grid-item{
+    font-size:30px;
+}
+.gri-item{
+    font-size:25px;
+    background-color: rgb(234, 215, 234);
+    margin-top:10px;
+}
+
+
+/* -----------------------------item-list end----------------------------*/
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Style the text inside the footer */
+.footer-content {
+    font-size: 14px;
+}

@@ -1,0 +1,14 @@
+{% load static %}
+<header>
+    <img src="{% static 'images/cbe-logo.png' %}" alt="image of cbe logo" width = 100px>
+    <nav class="main-nav">
+        <a href="{% url 'dashboard_staff' %}" id="dashboard">Home</a>
+        <a href="{% url 'items_staff' %}" id = 'items'>Items</a>
+        <a href="{% url 'checkoutt_staff' %}" id = checkout>Checkout</a>
+        <a href="{% url 'requests_staff' %}" id = 'request'>Request</a>
+      
+    </nav>
+    <p>{{username}}</p>
+    <a href="{% url 'login' %}" style="margin:13px 20px;">logout</a>
+    <!-- <a href="">profile <img src="{% static 'images/profile.png' %}" alt="profile imag" width = 25px></a> -->
+</header>

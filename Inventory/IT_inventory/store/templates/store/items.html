@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block description %}This is dashboard, enjoy it.{% endblock %}
+{% block robots %}index,follow{% endblock %}
+{% block keywords %}IT CBE{% endblock %}
+{% block css %}{% static "store/items.css" %}{% endblock %}
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    {% include "includes/nav_store.html" %}
+    <h1>store items check</h1>
+
+    <div id = check>
+        <div id = "check-head">
+            <div class="grid-item">Item_id</div>
+            <div class="grid-item">Item_type</div>
+            <div class="grid-item">Quantity</div>
+            <div class="grid-item">Date</div>
+        </div>
+        <hr>
+        <div id = check-list1>
+            {% for i in itms %}
+            <div id = "check-list">
+                <div class="gri-item">{{i.id}}</div>
+                <div class="gri-item">{{i.item}}</div>
+                <div class="gri-item">{{i.quantity}}</div>
+                <div class="gri-item">{{i.date}}</div>
+            </div>
+            {% endfor %}
+            <hr>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 My Website</p>
+        </div>
+    </footer>
+{% endblock %}

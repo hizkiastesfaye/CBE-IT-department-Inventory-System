@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 400px;
+    margin: -60px auto 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color:purple;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: grid;
+    grid-gap: 10px;
+    padding:10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    height: 12px;
+}
+
+button {
+    background-color: purple;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    margin:10px 0;
+    width:100%;
+
+}
+#log{
+    font-size:20px;
+    margin-left:90%;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}

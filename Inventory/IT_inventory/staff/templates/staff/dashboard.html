@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block description %}This is dashboard, enjoy it.{% endblock %}
+{% block robots %}index,follow{% endblock %}
+{% block keywords %}IT CBE{% endblock %}
+{% block css %}{% static "staff/home.css" %}{% endblock %}
+{% block title %}Dashboard{% endblock %}
+
+
+{% block body %}
+    {% include "includes/nav.html" %}
+    <h2>Hi {{username}},</h2>
+    <div id = 'all_explain'>
+        <div id ='explain'>
+            
+            <img src={% static "staff/images/board.png" %} alt="image of cbee" width="40%">
+            <div id =linklink>
+                <h3>Banking with CBE Made Easy</h3>
+                <p>Using CBE's Internet Banking facility, customers will benefit from our Personal and <br>
+                    Corporate Internet Banking services that are available, 24 hours a day, 7 days a week,<br> from any location</p>
+            </div>
+            <div id =linklink>
+                <h3>Digital Based</h3>
+                <p>Delivering banking services through high level of process automated machines and<br> 
+                    web-based. It provides easy, convenient, flexible and secure banking services for<br>
+                    CBE customers using their digital cards, mobile phone, or internet accesses.</p>
+            </div>
+        </div>
+        <div id = 'links'>
+            <div id="linklink">
+                <h3><a href="{% url 'items_staff' %}" style="color:blue;"> Product Items</a></h3>
+                <p>The "Product Items" page provides a comprehensive view of our diverse range of products. <br>
+                    Explore this page to discover an array of high-quality items, each with detailed descriptions and images,<br>
+                    making it easy to find the perfect product for your needs</p>
+            </div>
+            <div id="linklink">
+                <h3><a href="{% url 'requests_staff' %}" style="color:blue;">Request</a></h3>
+                <p>To request a product item, simply click on the "Request" button and complete the required fields. <br>
+                    If you want to check your orders, click here <a href=" {% url 'checkoutt_staff' %}" style="color:blue;">ORDERS</a> </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 My Website</p>
+        </div>
+    </footer>
+{% endblock %}

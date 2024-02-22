@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block description %}This is dashboard, enjoy it.{% endblock %}
+{% block robots %}index,follow{% endblock %}
+{% block keywords %}IT CBE{% endblock %}
+{% block css %}{% static "staff/request.css" %}{% endblock %}
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    {% include "includes/nav.html" %}
+    <form action ='#' method="post">
+        {% csrf_token %}
+        {% if numb == 1 %}
+        <P style="color:red">{{error}}</P>
+        <label for="items_type">Item Type</label><br>
+        <input type="text" required id = 'item_type' name="items_type" value={{reasonn_item}}><br>
+        <label for="quantity">Quantity</label><br>
+        <input type="number" required id = 'quantity' name="quantity" value={{reasonn_quantity}} pattern="[0-9]{10}"><br>
+        <label for="reason">Reason</label><br>
+        <textarea name="reason"  id = 'reason' name="reason">{{reasonn_reason}}</textarea><br>
+        <button id = 'submit'>Submit</button>
+        <p> If you can not get the items click <a href="{% url 'requests_no_staff' %}">here </a> to request with letter</p>
+        {% else %}
+        <label for="items_type">Item Type</label><br>
+        <input type="text" required id = 'item_type' name="items_type" value={{reasonn.item}}><br>
+        <label for="quantity">Quantity</label><br>
+        <input type="number" required id = 'quantity' name="quantity" value={{reasonn.quantity}} pattern="[0-9]{10}"><br>
+        <label for="reason">Reason</label><br>
+        <textarea name="reason"  id = 'reason' name="reason">{{reasonn.reason}}</textarea><br>
+        <button id = 'submit'>Submit</button>
+        <p> If you can not get the items click <a href="{% url 'requests_no_staff' %}">here </a> to request with letter</p>
+        {% endif %}
+    </form>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 My Website</p>
+        </div>
+    </footer>
+{% endblock %}

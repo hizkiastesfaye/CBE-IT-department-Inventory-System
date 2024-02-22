@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block description %}This is dashboard, enjoy it.{% endblock %}
+{% block robots %}index,follow{% endblock %}
+{% block keywords %}IT CBE{% endblock %}
+{% block css %}{% static "store/request.css" %}{% endblock %}
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    {% include "includes/nav_store.html" %}
+    <form action='#' method="post">
+        {% csrf_token %}
+        <label for="item_type">Item Type</label><br>
+        <input type="text" required id = 'item_type' name="item_type" ><br>
+        <label for="quantity">Quantity</label><br>
+        <input type="number" required name="quantity" id = 'quantity' pattern="[0-9]{10}"><br>
+        <button id = 'submit' type="submit">Submit</button>
+        <p> If you can not get the items click <a href="{% url 'add_item' %}">here </a> to request with letter</p>
+    </form>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 My Website</p>
+        </div>
+    </footer>
+{% endblock %}

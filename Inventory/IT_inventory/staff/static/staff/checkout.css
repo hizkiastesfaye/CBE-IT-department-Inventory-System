@@ -1,0 +1,131 @@
+
+/* -----------------------------header start----------------------------*/
+header{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow:0 5px 20px 0 rgb(160, 160, 160);
+}
+.main-nav{
+    margin-left:200px;
+    display:flex;
+    width:90%;
+    padding:10px;
+    column-gap:10px
+    
+}
+.main-nav a{
+    font-size: 30px;
+    color: purple;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+.main-nav a:hover{
+    color: white;
+    background-color: rgb(202, 153, 202);
+    transition-duration:0.3s;
+}
+nav #checkout{
+    color:rgb(255, 255, 255);
+    background-color:  purple;
+}
+
+/* -----------------------------header end----------------------------*/
+
+/* -----------------------------check out lists----------------------------*/
+/* #checkcheck{
+    display:grid;
+    grid-template-columns: ;
+} */
+#check{
+    
+    width:90%;
+    margin:0 auto;
+    
+}
+#check-list1{
+    height:400px;
+    overflow-y:auto;
+    border-radius: 10px;
+}
+#check-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 15%;
+    grid-row-gap:40px;
+}
+#check-head{
+    /* background-color: rgb(0, 255, 89); */
+    color:purple;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 15%;
+    grid-gap:10px;
+    height:40px;
+    margin:60px 0 20px 0;
+}
+.grid-item{
+    font-size:30px;
+}
+.gri-item{
+    font-size:25px;
+    background-color: rgb(234, 215, 234);
+    margin-top:10px;
+}
+#items_edit{
+    margin-left: 70%; 
+    color:white; 
+    background-color: rgb(197, 119, 197);
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+#items_edit:hover{
+    background-color: purple;
+    cursor: pointer;
+}
+#items_delete{
+    margin-left: 20px; 
+    color:white; 
+    background-color: rgb(197, 119, 197);
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#items_delete:hover{
+    background-color: purple;
+    cursor: pointer;
+}
+
+#taken{
+    font-size:15px;
+    color:purple;
+}
+
+/* -----------------------------check out lists end----------------------------*/
+
+.check_in_detail{
+    color:purple;
+    /* margin: 80px 0; */
+    display:none;  
+}
+.check_in_detail:target {
+    display: block;
+}
+
+footer {
+    position:absolute;
+    left:0;
+    width:100%;
+    margin-top: 10%;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Style the text inside the footer */
+.footer-content {
+    font-size: 14px;
+}

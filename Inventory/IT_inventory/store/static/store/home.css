@@ -1,0 +1,151 @@
+h1{
+    color: red;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: rgb(240, 240, 240); */
+    /* margin-top:-7px; */
+    border-radius: 10px;
+    box-shadow:0px 5px 20px 0 rgb(160, 160, 160);
+}
+.main-nav{
+    margin-left:200px;
+    display:flex;
+    width:90%;
+    padding:10px;
+    column-gap:10px
+    
+}
+.main-nav a{
+    font-size: 30px;
+    /* background-color: rgb(236, 236, 255); */
+    color: purple;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+.main-nav a:hover{
+    color: white;
+    background-color: rgb(202, 153, 202);
+    transition-duration:0.3s;
+}
+#dashboard{
+    color:rgb(255, 255, 255);
+    background-color:  purple;
+}
+/*-------------------------------------header ends0---------------------------*/
+
+#allofthem{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* -----------------------------item-list end----------------------------*/
+#check{
+    width:100%;
+    margin:0 20px;
+    
+}
+#check-list1{
+    /* background-color: rgb(241, 241, 241); */
+    height:450px;
+    overflow-y:auto;
+    border-radius: 10px;
+
+    
+}
+#check-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-row-gap:40px;
+
+}
+#check-head{
+    /* background-color: rgb(0, 255, 89); */
+    color:purple;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    grid-gap:10px;
+    height:40px;
+    margin:60px 0 20px 0;
+}
+.grid-item{
+    font-size:30px;
+}
+.gri-item{
+    font-size:25px;
+    background-color: rgb(234, 215, 234);
+    margin-top:10px;
+}
+
+#delete_item{
+    text-decoration:none;
+    color:red; 
+    font-size:16px;
+}
+#delete_item:hover{
+    color:blue;
+
+}
+
+
+/* -----------------------------item-list end----------------------------*/
+
+
+/* ----------------------------form end----------------------------*/
+#add_itemm{
+    margin-left:40px;
+    
+}
+form{
+    background-color: rgb(234, 234, 234);
+    margin: 50px auto;
+    width:40%;
+    height: 300px;
+    padding:70px 20px;
+    border-radius:10px;
+}
+input, form #reason{
+    margin:5% 20%;
+    padding: 5px;
+}
+
+form label{
+    margin: 10px 10px;
+    font-size:20px;
+    color:purple;
+}
+button{
+    font-size:25px;
+    margin: 30px auto;
+    border-radius: 10px;
+    color:white;
+    font-weight: bolder;
+    background-color: rgb(193, 113, 193);
+    padding:5px 20px;
+    width:80%
+}
+button:hover{
+    background-color: purple;
+    cursor:pointer;
+}
+/* -----------------------------form end----------------------------*/
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Style the text inside the footer */
+.footer-content {
+    font-size: 14px;
+}

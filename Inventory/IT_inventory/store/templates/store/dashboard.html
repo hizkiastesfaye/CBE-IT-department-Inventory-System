@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block description %}This is dashboard, enjoy it.{% endblock %}
+{% block robots %}index,follow{% endblock %}
+{% block keywords %}IT CBE{% endblock %}
+{% block css %}{% static "store/home.css" %}{% endblock %}
+{% block title %}Dashboard{% endblock %}
+
+
+{% block body %}
+    {% include "includes/nav_store.html" %}
+
+    <div id = 'allofthem'>
+
+        <div id = check>
+            <div id = "check-head">
+                <!-- <div class="grid-item">Item_id</div> -->
+                <div class="grid-item">Item_type</div>
+                <div class="grid-item">Quantity</div>
+                <div class="grid-item">Date</div>
+            </div>
+            <hr>
+            <div id = check-list1>
+                {% for i in itms %}
+                <div id = "check-list">
+                    <!-- <div class="gri-item">{{i.id}}</div> -->
+                    <a href="{% url 'dashboard_store' %}?store_id={{i.id }}" class="gri-item" style="text-decoration:none; color:blue;">{{i.item}}</a>
+                    <!-- <div class="gri-item">{{i.item}}</div> -->
+                    <div class="gri-item">{{i.quantity}}</div>
+                    <div class="gri-item">{{i.date}}</div>
+                    <a href="{% url 'dashboard_store' %}?delete_id={{i.id}}" class="gri-item" id = 'delete_item'>DELETE</a>
+                </div>
+                {% endfor %}
+                <hr>
+            </div>
+        </div>
+
+        <div id ='add_itemm'>
+
+            <form action='#' method="post">
+                {% csrf_token %}
+                <label for="item_type" >Item Type</label><br>
+                <input type="text"  required id = 'item_type' name="item_type" value={{edit_it.item}}><br>
+                <label for="quantity">Quantity</label><br>
+                <input type="number" required name="quantity" id = 'quantity' pattern="[0-9]{10}" value={{edit_it.quantity}}><br>
+                <button id = 'submit' type="submit">Submit</button>
+            </form>
+            
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 My Website</p>
+        </div>
+    </footer>
+{% endblock %}

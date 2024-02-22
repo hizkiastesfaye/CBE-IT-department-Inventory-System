@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block description %}This is dashboard, enjoy it.{% endblock %}
+{% block robots %}index,follow{% endblock %}
+{% block keywords %}IT CBE{% endblock %}
+{% block css %}{% static "store/checkout.css" %}{% endblock %}
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    {% include "includes/nav_store.html" %}
+    <div id = check>
+        <div id = "check-head">
+            <div class="grid-item">Username</div>
+            <div class="grid-item">Item_type</div>
+            <div class="grid-item">Quantity</div>
+            <div class="grid-item">Date</div>
+        </div>
+        <hr>
+        <div id = check-list1>
+            {% for i in requ %}
+            <div id = "check-list">
+                <div class="gri-item">{{i.username}}</div>
+                <div class="gri-item">{{i.item}}</div>
+                <div class="gri-item">{{i.quantity}}</div>
+                <div class="gri-item">{{i.date}}</div>
+                <a href="{% url 'checkoutt_store' %}?approve_id={{i.id}}" id = 'approve_id' class="gri-item">Approve</a>
+                
+            </div>
+            {% endfor %}
+            
+        </div>
+        <hr>   
+        <h3 style="color:purple; margin:30px 35%">Approved Item Lists</h3>
+        <hr>
+        <div class = 'check-list1'>
+            {% for i in requ_True %}
+            <div id = "check-list">
+                <div class="gri-item">{{i.username}}</div>
+                <div class="gri-item">{{i.item}}</div>
+                <div class="gri-item">{{i.quantity}}</div>
+                <div class="gri-item">{{i.date}}</div>
+                <div class="gri-item" style="font-size:15px">Approved</div>
+                
+            </div>
+            {% endfor %}
+            <hr>
+        </div>
+            
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 My Website</p>
+        </div>
+    </footer>
+{% endblock %}

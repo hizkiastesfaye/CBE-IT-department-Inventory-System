@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block description %}This is dashboard, enjoy it.{% endblock %}
+{% block robots %}index,follow{% endblock %}
+{% block keywords %}IT CBE{% endblock %}
+{% block css %}{% static "staff/request_no.css" %}{% endblock %}
+{% block title %}Dashboard{% endblock %}
+
+{% block body %}
+    {% include "includes/nav.html" %}
+
+    <div id="request_n">
+        <div id = 'request_form'>
+            <form action='#' method="post">
+                {% csrf_token %}
+                <label for="description">Description</label><br>
+                <textarea name="description" rows="15" cols="70" id = 'description'></textarea><br>
+                <button id = 'submit' type="submit">Submit</button>
+            </form>
+        </div>
+        <div id = request_check>
+            <div id = request_check-list1>
+                {% for i in descript %}
+                <div id = "request_check-list">
+                    <div class="gri-item">
+                        <h3>Date:</h3>
+                        <p>{{i.date}}</p>
+                    </div>
+                    <div class="gri-item">
+                        <h3>Description</h3>
+                        <p>{{i.description}}</p>
+                    </div>
+                    
+                </div>
+                {% endfor %}
+                <hr>
+            </div>
+        </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 My Website</p>
+        </div>
+    </footer>
+{% endblock %}
