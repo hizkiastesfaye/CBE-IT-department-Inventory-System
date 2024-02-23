@@ -64,22 +64,6 @@ class dashboardView(View):
         dashboardView.store_ids=0
         return redirect("dashboard_store")
 
-# class helloview(View):
-#     def get(self,request):
-#         return(HttpResponse('hello people! hasfex'))
-    
-# class Itemsview(View):
-#     def get(self,request):
-#         lis = [0,1,2,3]
-#         it = Items.objects.all()
-#         return render(request,"store/items.html",{
-#             'itms':it,
-#             'lis':lis
-#         })
-#     def post(self,request):
-#         pass
-# def Items(request):
-   
 
 class Checkoutview(View):
     def get(self,request):
@@ -109,17 +93,6 @@ class Checkoutview(View):
             'username':request.session.get('usernamee',''),
         })
 
-# class Add_itemview(View):
-#     def get(self,request):
-#         return render(request,"store/add_item.html",)
-#     def post(self,request):
-       
-#         itemms = request.POST
-       
-#         print(itemms)
-#         if itemms['item_type'] is not None and itemms['quantity'] is not None:
-#             one_item=Items(item=itemms['item_type'], quantity=itemms['quantity'])
-#             # one_item.save()
-#             return redirect("dashboard")
+
 
 
